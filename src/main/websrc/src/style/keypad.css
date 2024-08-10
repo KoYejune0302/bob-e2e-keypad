@@ -1,0 +1,68 @@
+.table-style {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    background-color: #0071AE28;
+    border-collapse: collapse; /* Ensure table cells are tightly packed */
+}
+
+.td-style {
+    padding: 0;
+    margin: 0;
+}
+
+
+.button-style {
+    width: 100%;
+    appearance: none;
+    border-radius: 0;
+    position: relative;
+    height: 63px;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background: #15b8f026;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.number-style {
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    margin-left: -25px;
+    top: 5px;
+}
+
+.keypad-parent-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.keypad-container {
+    position: relative;
+    width: 200px;  /* Adjust to the width of the image */
+    height: 150px; /* Adjust to the height of the image */
+    background-color: #0071AE28; /* Background color as specified */
+}
+
+
+.input-group-style {
+    padding: 50px;
+    text-align: center;
+}
+
+.input-char-style {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    margin: 6px;
+}
+
+.input-char-style.active {
+    background-color: #2454c8;
+}

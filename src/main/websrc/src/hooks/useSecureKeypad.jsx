@@ -18,7 +18,7 @@ export default function useSecureKeypad() {
     axios.get('/api/keypad')
       .then(response => {
         const keypad = response.data;
-        console.log(keypad);
+        // console.log(keypad);
         setKeypad(keypad);
       })
       .catch(error => {
@@ -29,7 +29,7 @@ export default function useSecureKeypad() {
 
   const onKeyPressed = (row, col) => {
     const value = keypad.hashValues[row * 4 + col];
-    console.log(`Button ${value} clicked`);
+    // console.log(`Button ${value} clicked`);
     setUserInput([...userInput, value]);
   }
 

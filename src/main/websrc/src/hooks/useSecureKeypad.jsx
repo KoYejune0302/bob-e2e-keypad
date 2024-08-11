@@ -1,12 +1,18 @@
 "use client";
 
-import {useMemo, useState} from 'react';
+import {useMemo, useState, useEffect} from 'react';
 import axios from "axios";
 import {JSEncrypt} from "jsencrypt";
 
 export default function useSecureKeypad() {
   const [keypad, setKeypad] = useState(null);
   const [userInput, setUserInput] = useState([]);
+
+  useEffect(() => {
+    if (userInput.length === 6) {
+      sendUserInput();
+    }
+  }, [userInput]);
 
   const getSecureKeypad = () => {
     axios.get('/api/keypad')
@@ -25,10 +31,13 @@ export default function useSecureKeypad() {
     const value = keypad.hashValues[row * 4 + col];
     console.log(`Button ${value} clicked`);
     setUserInput([...userInput, value]);
-    console.log(userInput.length);
   }
 
-  const sendUserInput = () => {}
+  const sendUserInput = () => {
+    alert('Sending user input: ' + userInput.join('\n'));
+    setUserInput([]);
+    getSecureKeypad();
+  }
 
   return {
     states: {

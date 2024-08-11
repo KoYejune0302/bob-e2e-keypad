@@ -5,39 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60035758-926d-4f5e-a9ed-5cc0d1992713" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/.eslintrc.json:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/.gitignore:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/jsconfig.json:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/next.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/next.config.mjs:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/package-lock.json:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/package.json:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/public/vite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/public/vite.svg:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/app/layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/app/layout.js:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/app/page.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/app/page.jsx:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/components/KeypadUserInput.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/components/KeypadUserInput.jsx:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/components/SecureKeypad.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/components/SecureKeypad.jsx:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/hooks/useSecureKeypad.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/hooks/useSecureKeypad.jsx:Zone.Identifier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/style/keypad.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/websrc/src/style/keypad.css:Zone.Identifier" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/controller/KeypadController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/controller/KeypadController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +33,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2kS3ACAbNRiJfpRQTlmoDFPbxKb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -82,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.Application.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -100,7 +69,7 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23776042" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23807803" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -114,7 +83,7 @@
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.32994187" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32994187" />
       <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.32994187" />
-      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Services" order="5" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Beans" />
@@ -151,6 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723263005846</updated>
       <workItem from="1723263009390" duration="7055000" />
+      <workItem from="1723348702036" duration="54000" />
     </task>
     <servers />
   </component>

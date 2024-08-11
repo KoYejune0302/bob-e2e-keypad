@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60035758-926d-4f5e-a9ed-5cc0d1992713" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,7 @@
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.32994187" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32994187" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.32994187" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" />
       <window_info anchor="bottom" id="Services" order="5" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
@@ -120,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723263005846</updated>
       <workItem from="1723263009390" duration="7055000" />
-      <workItem from="1723348702036" duration="54000" />
+      <workItem from="1723348702036" duration="783000" />
     </task>
     <servers />
   </component>

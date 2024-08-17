@@ -5,6 +5,7 @@ import org.springframework.data.redis.core.RedisTemplate
 import org.springframework.data.redis.core.ValueOperations
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -16,7 +17,23 @@ import java.util.Base64
 import java.awt.Graphics2D
 import org.springframework.beans.factory.annotation.Autowired
 
+import org.springframework.web.bind.annotation.*
+import com.dto.VerifyRequestDto
+import com.dto.VerifyResponseDto
+import com.dto.endpointPayload
+
+import org.springframework.http.HttpEntity
+import org.springframework.http.HttpHeaders
+import org.springframework.http.HttpMethod
+import org.springframework.http.ResponseEntity
+import org.springframework.web.client.RestTemplate
+
+import com.google.gson.Gson
+import jakarta.validation.Payload
+
 import org.springframework.web.bind.annotation.CrossOrigin
+
+import okhttp3.*
 
 @CrossOrigin(origins = ["http://localhost:3000"])
 @RestController
@@ -102,8 +119,69 @@ class KeypadController @Autowired constructor(
     }
 
     private fun generateHash(value: String, salt: String): String {
-        val messageDigest = MessageDigest.getInstance("SHA-256")
+        val messageDigest = MessageDigest.getInstance("SHA-1")
         val hashBytes = messageDigest.digest((value + salt).toByteArray())
         return hashBytes.joinToString("") { "%02x".format(it) }
     }
+}
+
+
+@CrossOrigin(origins = ["http://localhost:3000"])
+@RestController
+@RequestMapping("/verify")
+class VerifyController @Autowired constructor(
+    private val redisTemplate: RedisTemplate<String, Any>
+) {
+
+    @PostMapping
+    fun verifyUserInput(@RequestBody verifyRequestDto: VerifyRequestDto): VerifyResponseDto {
+        val keypadId = verifyRequestDto.keypadId
+        val encryptedUserInput = verifyRequestDto.userInput
+
+        // Retrieve stored values and hash values from Redis
+        val valueOperations: ValueOperations<String, Any> = redisTemplate.opsForValue()
+        val storedValues = valueOperations.get("keypad:$keypadId:values") as? String
+        val storedHashValues = valueOperations.get("keypad:$keypadId:hash") as? String
+
+        if (storedValues == null || storedHashValues == null) {
+            return VerifyResponseDto(success = "Failed", message = "Invalid keypadId or no data found")
+        }
+
+        val inputLenCheck = storedHashValues?.split(",") ?: emptyList()
+        val inputLen = inputLenCheck[0].length
+
+        println("type: ${storedValues?.javaClass ?: null }")
+        println("Stored Values: $storedValues")
+        println("type: ${storedHashValues?.javaClass ?: null}")
+        println("Stored Hash Values: $storedHashValues")
+        println("inputLen: $inputLen")
+
+        val valuesList = storedValues.split(",")
+        val hashValuesList = storedHashValues.split(",")
+        val valMap: Map<String, String> = valuesList.zip(hashValuesList).toMap()
+
+        val payload = endpointPayload(encryptedUserInput, valMap, inputLen)
+        val baseUrl = "http://146.56.119.112:8081/auth"
+
+        // Create RestTemplate instance
+        val restTemplate = RestTemplate()
+
+        // Set up the HTTP headers
+        val headers = HttpHeaders().apply {
+            set("Content-Type", "application/json")
+        }
+
+        // Create the HTTP entity with the payload and headers
+        val requestEntity = HttpEntity(payload, headers)
+
+        // Send the POST request
+        val response: ResponseEntity<String> = restTemplate.exchange(baseUrl, HttpMethod.POST, requestEntity, String::class.java)
+        val responseBody = response.body ?: "No response body"
+
+        // Print response
+        println("Response: ${responseBody}")
+
+        return VerifyResponseDto(success = "Success", message = responseBody)
+    }
+
 }

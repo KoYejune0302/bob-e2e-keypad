@@ -10,6 +10,7 @@ build/
 .idea/compiler.xml
 .idea/libraries/
 .idea/workspace.xml
+*.xml
 *.iws
 *.iml
 *.ipr
@@ -41,3 +42,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+
+*.Identifier

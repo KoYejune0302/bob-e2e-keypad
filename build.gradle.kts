@@ -35,6 +35,9 @@ dependencies {
 
     implementation("io.ktor:ktor-server-cors:2.0.0")
 
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("com.google.code.gson:gson:2.8.8")
+
 }
 
 tasks.test {
